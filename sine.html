@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sine Wave Generator with Controls</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        input {
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <label for="frequencySlider">Frequency:</label>
+    <input type="range" id="frequencySlider" min="20" max="20000" step="1" value="20">
+    <span id="frequencyLabel">20 Hz</span>
+
+    <button onclick="playSineWave()">Play</button>
+    <button onclick="stopSound()">Stop</button>
+    <button onclick="toggleIncreaseFrequency()">Start Increase Frequency</button>
+
+    <script src="./js/generate.js"></script>
+</body>
+<footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" class="hover:underline">TECH VIVIDH™</a>. All Rights Reserved.
+    </span>
+    </div>
+</footer>
+
+</html>
